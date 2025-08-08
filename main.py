@@ -1,6 +1,8 @@
 import argparse
 import sys
 from tracker.fetcher import fetch_url
+from tracker.parser import parse_html
+
 # Create a parser
 parser = argparse.ArgumentParser(description='Welcome to AutoPriceTracker CLI App')
 
@@ -20,5 +22,10 @@ parser.add_argument(
 
 args = parser.parse_args()
 
+html_text = fetch_url(args.url)
+price = parse_html(html_text)
 
-fetch_url(args.url)
+if price and price <= args.target_price:
+    print(f'Horray! current price:{price}, is less than or equal to your target price')
+else:
+    print(f'Sorry! current price: {price}, is still higher than your target price')
