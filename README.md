@@ -1,15 +1,13 @@
 # 🔍 AutoPriceTracker
 
-**AutoPriceTracker** is a Python CLI application that tracks prices of products from e-commerce websites (like Amazon, Walmart, etc.) and alerts users when prices drop below a target value.
+**AutoPriceTracker** is a Python CLI application that tracks prices of products from e-commerce websites (like Amazon, Walmart, etc.) and inform users if the current price is below their target value.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Track product prices from given URLs
-- ✅ Store historical price data (JSON/CSV)
-- ✅ Notify user if price falls below a threshold
-- ✅ Mockable and testable components
+- ✅ Track product prices from a given URL and inform the user if the current price is below their targer price
+- ✅ Testable components
 - ✅ Auto CI testing pipeline with GitHub Actions
 
 ---
@@ -17,20 +15,20 @@
 ## 🛠️ Stack
 
 - Python 3.11+
-- `requests`, `beautifulsoup4` for web scraping
-- `pytest`, `pytest-mock` for testing
+- `requests`, `regex` for web scraping
+- `pytest` for testing
 - GitHub Actions for CI
-- `black`, `flake8`, `mypy` for linting and type checking
+- `pylint` for linting 
 
 ---
 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/autopricetracker.git
-cd autopricetracker
+git clone https://github.com/nileshpandey3/auto_price_tracker
+cd into the project root dir
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate 
 pip install -r requirements.txt
 ```
 
