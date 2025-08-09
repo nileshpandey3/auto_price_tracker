@@ -31,3 +31,5 @@ if price and price <= args.target_price:
     print(f'Horray! current price:{price}, is less than or equal to your target price: {args.target_price}')
 else:
     print(f'Sorry! current price: {price}, is still higher than your target price: {args.target_price}')
+
+    
