@@ -22,9 +22,11 @@ parser.add_argument(
 
 args = parser.parse_args()
 
+# Call the app function to perform the fetch + parse logic 
 html_text = fetch_url(args.url)
 price = parse_html(html_text)
 
+# Generate the user result and display on the terminal
 if price and price <= args.target_price:
     print(f'Horray! current price:{price}, is less than or equal to your target price: {args.target_price}')
 else:
