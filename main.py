@@ -16,7 +16,7 @@ parser.add_argument(
 parser.add_argument(
     '--target-price',
     default=None,
-    type=int,
+    type=float,
     help='Your target price for the product'
 )
 
@@ -26,6 +26,6 @@ html_text = fetch_url(args.url)
 price = parse_html(html_text)
 
 if price and price <= args.target_price:
-    print(f'Horray! current price:{price}, is less than or equal to your target price')
+    print(f'Horray! current price:{price}, is less than or equal to your target price: {args.target_price}')
 else:
-    print(f'Sorry! current price: {price}, is still higher than your target price')
+    print(f'Sorry! current price: {price}, is still higher than your target price: {args.target_price}')

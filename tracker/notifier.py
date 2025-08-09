@@ -1,0 +1,2 @@
+# This file can be used to extend this project by adding logic to send email/push notification/console alerts etc.
+# keeping it blank for now as the main purpose of this project is to show the end to end working of an app using github actions
