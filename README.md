@@ -6,9 +6,9 @@
 
 ## 🚀 Features
 
-- ✅ Track product prices from a given URL and inform the user if the current price is below their targer price
-- ✅ Testable components
-- ✅ Auto CI testing pipeline with GitHub Actions
+- ✅ Track product prices from a given amazon.com URL and inform the user whether the current price ($ only) is below their targer price or not
+- ✅ Testable components using Pytest
+- ✅ Automated CI testing pipeline with GitHub Actions for every push and pull request
 
 ---
 
@@ -17,8 +17,9 @@
 - Python 3.11+
 - `requests`, `regex` for web scraping
 - `pytest` for testing
-- GitHub Actions for CI
-- `pylint` for linting 
+- GitHub Actions for CI/CD
+- `ruff` for fast linting & formatting
+- `pre-commit` git hook for ruff to automate linting and formatting before commit
 
 ---
 
