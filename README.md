@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```bash
 pytest
 ```
-
+![Pytest](pytest.png "Pytest Run")
 ---
 
 ## 📈 Example Usage
@@ -47,7 +47,8 @@ pytest
 ```bash
 python main.py --url https://www.amazon.com/dp/B08N5WRWNW --target-price 200
 ```
-App in action 
+
+![App in action](app_working.png "App in action")
 
 
 
