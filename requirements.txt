@@ -1,3 +1,5 @@
 requests
 ipdb
 pytest
+ruff
+pre-commit

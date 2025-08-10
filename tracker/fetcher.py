@@ -1,10 +1,14 @@
 import requests
-import ipdb
+
 
 def fetch_url(url):
-    resp = requests.get(url)
-    resp.raise_for_status()
-    return resp.text
-    
-
-
+    try:
+        resp = requests.get(url)
+        return resp.text
+    except requests.HTTPError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    except Exception as e:
+        print(e)
+        raise
