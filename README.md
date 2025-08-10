@@ -1,6 +1,6 @@
 # 🔍 AutoPriceTracker
 
-**AutoPriceTracker** is a Python CLI application that tracks prices of products from e-commerce websites (like Amazon, Walmart, etc.) and inform users if the current price is below their target value.
+**AutoPriceTracker** is a Python CLI application that tracks prices of products from amazon.com [U.S.A. Only] and informs users whether the current price is below their target value or not.
 
 ---
 
@@ -47,5 +47,8 @@ pytest
 ```bash
 python main.py --url https://www.amazon.com/dp/B08N5WRWNW --target-price 200
 ```
+App in action 
+
+
 
 ---

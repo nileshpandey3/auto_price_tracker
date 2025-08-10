@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 
 # Regex pattern for finding e.g. "$199.99" or "$ 5.0" from any given html page
 pattern = re.compile(r"\$\s?(\d+(?:\.\d{1,2})?)")
+
 """
 | Pattern       | Meaning                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -19,8 +20,14 @@ pattern = re.compile(r"\$\s?(\d+(?:\.\d{1,2})?)")
 
 def parse_html(text):
     # Find and return the price from the given text
-    soup = BeautifulSoup(text, 'html.parser')
-    match = pattern.search(soup.text)
-    if match:
-        return float(match.group(1))
-    
+    soup = BeautifulSoup(text, "html.parser")
+
+    if soup.html and soup.body:
+        match = pattern.search(soup.text)
+        if match:
+            result = float(match.group(1))
+            return result
+        else:
+            print(f"Unable to find price: Result is {match}")
+    else:
+        print(f"Invalid input: html:{soup.html}, body: {soup.body}")

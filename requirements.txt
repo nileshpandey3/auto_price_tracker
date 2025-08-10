@@ -1,5 +1,5 @@
 requests
-ipdb
 pytest
 ruff
 pre-commit
+bs4

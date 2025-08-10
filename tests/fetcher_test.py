@@ -9,7 +9,7 @@ class TestFetcher:
     def test_successful_fetch_with_example_url(self):
         url = "https://example.com"
         resp = fetch_url(url)
-        assert "Example Domain" in resp
+        assert "This domain is for use in illustrative examples in documents" in resp
 
     @pytest.mark.empty_url
     def test_empty_url(self, capfd):
