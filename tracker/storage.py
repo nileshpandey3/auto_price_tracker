@@ -1,0 +1,2 @@
+# This file can be used to add logic to save price history and show the comparison against it
+# keeping it blank for now as the main purpose of this project is to show the end to end working of an app using github actions
